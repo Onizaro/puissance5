@@ -3,4 +3,9 @@ project(puissance5)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(puissance5 main.cpp)
+add_executable(puissance5 main.cpp
+        Joueur.cpp
+        Joueur.h
+        Grille.cpp
+        Grille.h
+)
