@@ -67,6 +67,12 @@ build CMakeFiles/puissance5.dir/Grille.cpp.obj: CXX_COMPILER__puissance5_unscann
   OBJECT_DIR = CMakeFiles\puissance5.dir
   OBJECT_FILE_DIR = CMakeFiles\puissance5.dir
 
+build CMakeFiles/puissance5.dir/IA.cpp.obj: CXX_COMPILER__puissance5_unscanned_Debug C$:/Users/Nizar/CLionProjects/puissance5/IA.cpp || cmake_object_order_depends_target_puissance5
+  DEP_FILE = CMakeFiles\puissance5.dir\IA.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\puissance5.dir
+  OBJECT_FILE_DIR = CMakeFiles\puissance5.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target puissance5
@@ -75,7 +81,7 @@ build CMakeFiles/puissance5.dir/Grille.cpp.obj: CXX_COMPILER__puissance5_unscann
 #############################################
 # Link the executable puissance5.exe
 
-build puissance5.exe: CXX_EXECUTABLE_LINKER__puissance5_Debug CMakeFiles/puissance5.dir/main.cpp.obj CMakeFiles/puissance5.dir/Joueur.cpp.obj CMakeFiles/puissance5.dir/Grille.cpp.obj
+build puissance5.exe: CXX_EXECUTABLE_LINKER__puissance5_Debug CMakeFiles/puissance5.dir/main.cpp.obj CMakeFiles/puissance5.dir/Joueur.cpp.obj CMakeFiles/puissance5.dir/Grille.cpp.obj CMakeFiles/puissance5.dir/IA.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\puissance5.dir

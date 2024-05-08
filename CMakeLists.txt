@@ -8,4 +8,6 @@ add_executable(puissance5 main.cpp
         Joueur.h
         Grille.cpp
         Grille.h
+        IA.cpp
+        IA.h
 )

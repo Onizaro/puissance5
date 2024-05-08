@@ -11,11 +11,19 @@ Grille::Grille (){
     }
 }
 
+Grille::Grille(Grille& g){
+    for (int i = 0 ; i < 6 ; i++){
+        for (int j = 0 ; j < 7 ; j++){
+            this->plateau[i][j]=g.getCase(i,j);
+        }
+    }
+}
+
 int Grille::getColonne() const {return this->colonne;}
 
 int Grille::getLigne() const {return this->ligne;}
 
-void Grille::setPlateau(const std::string (&nouveauPlateau)[6][7]) {
+void Grille::setPlateau(const string (&nouveauPlateau)[6][7]) {
     for (int i = 0; i < 6; ++i) {
         for (int j = 0; j < 7; ++j) {
             plateau[i][j] = nouveauPlateau[i][j];
@@ -23,9 +31,15 @@ void Grille::setPlateau(const std::string (&nouveauPlateau)[6][7]) {
     }
 }
 
-std::string (&Grille::getPlateau())[6][7] {return plateau;}
+string (&Grille::getPlateau())[6][7] {return plateau;}
+
+string Grille::getCase(int i, int j) const {
+    if (i >= 0 && i < ligne && j >= 0 && j < colonne) {return plateau[i][j];}
+    else {return "";}
+}
 
 void Grille::affiche() const{
+    cout << endl;
     for (int i = 0 ; i < 7 ; i++) {
         cout << i+1 << "\t";
     }

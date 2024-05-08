@@ -1,8 +1,22 @@
 #include <iostream>
 #include "Joueur.h"
 #include "Grille.h"
+#include "IA.h"
 
 int main() {
+    Grille test;
+    Joueur testj("test");
+    IA tesa;
+    testj.jouer(1,"X", test);
+    testj.jouer(1,"X", test);
+    testj.jouer(1,"X", test);
+    testj.jouer(1,"X", test);
+    testj.jouer(1,"X", test);
+    testj.jouer(1,"X", test);
+
+
+
+
     cout << "[PUISSANCE 5]\n\n";
     cout << "Veuillez choisir :\n1. Joueur contre Joueur\n2. Joueur contre IA\n";
     int choixJeu = 0;
@@ -45,7 +59,7 @@ int main() {
                         cin.clear();
                         cin.ignore(12345678, '\n');
                     }
-                    j1.jouer(choixj2-1,"0", grille);
+                    j2.jouer(choixj2-1,"0", grille);
                     if (grille.fin()){
                         cout<<nom2<<" a gnagne!\n";
                         termine = true;
@@ -55,7 +69,36 @@ int main() {
             break;}
 
         case 2: {
+            string nom1, nom2;
+            cout << "Choisir le nom du joueur :\n";
+            cin >> nom1;
+            Joueur j1(nom1), j2("IA");
+            IA ia;
+            bool termine = grille.fin();
+            while (!termine){
+                grille.affiche();
+                int choixj1(-1);
+                cout <<"Choix " << nom1 << " :\n";
+                while (!j1.isdispo(choixj1-1, grille)){
+                    cin >> choixj1;
+                    cin.clear();
+                    cin.ignore(12345678, '\n');
+                }
+                j1.jouer(choixj1-1,"X", grille);
+                if (grille.fin()){
+                    cout<<nom1<<" a gnagne!\n";
+                    termine = true;
+                }
+                grille.affiche();
+                if (!termine){
 
+                    j2.jouer(IA::absearch(grille),"0", grille);
+                    if (grille.fin()){
+                        cout<<nom2<<" a gnagne!\n";
+                        termine = true;
+                    }
+                }
+            }
             break;}
 
         default:{
@@ -64,3 +107,5 @@ int main() {
     }
     return 0;
 }
+
+
