@@ -1,2 +1,17 @@
 # Fichiers CMake
+CMakeLists.txt.user
 CMakeCache.txt
+CMakeFiles/
+cmake-build-debug/
+cmake-build-release/
+CMakeScripts/
+
+# Fichiers générés par l'IDE (par exemple, pour CLion)
+.idea/
+
+# Fichiers de build
+build/
+bin/
+
+# Fichiers de sauvegarde
+*~
