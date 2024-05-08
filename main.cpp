@@ -53,7 +53,7 @@ void update(string nom, Grille& grille, Color color){
 
 
 int main() {
-    InitWindow(screenWidth, screenHeight,"test");
+    InitWindow(screenWidth, screenHeight,"PUISSANCE5");
     SetTargetFPS(60);
     int gameState = 0 ; // 0: Menu, 1: Joueur contre joueur, 2: Joueur contre IA
     Grille grille;
