@@ -330,7 +330,7 @@ int IA::utility(Grille grille, string ia) {
 // Pour le code de la recherche alpha beta et minmax, nous avons simplement repris le pseudo-code du
 // cours de Datascience et ia du semestre 5 et nous l'avons adapté en c++
 int IA::absearch(Grille grille) {
-    int pdr = 4; // profondeur de recherche
+    int pdr = 7; // profondeur de recherche
     int temp, ui = -1;
     tie(temp, ui) = maxvalue(grille, -1000000, 1000000, pdr);
     return ui;
