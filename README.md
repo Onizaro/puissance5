@@ -23,7 +23,7 @@ Le jeu ce joue via la console en entrant un nombre entre 1 et 7 car raylib ne pe
 ![game example](images/jeu.gif "game example")
 
 
-### TODO
+### TROUBLESHOOTING
 
-Il y a un bug avec le fichier CMakeCache.txt, pour l'instant les autres personne qui veulent profiter du jeu ne peuvent pas.
-Je pense que l'erreur se trouve dans CMakeList.txt.
+Si vous rencontrez des erreurs de build, supprimer le dossier cmake-build-debug.
+Ensuite il faut re-build le projet en entier dans un terminal ou avec votre IDE
