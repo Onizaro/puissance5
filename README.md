@@ -5,7 +5,7 @@
 
 ### Description
 
-C'est un jeu de puissance 5 en C++ avec interface graphique (raylib) et IA (minmax)
+C'est un jeu de puissance 5 en C++ jouable en mode "Joueur contre Joueur" et "Joueur contre IA" via la console ou via une interface graphique (raylib)
 
 ### Features
 
