@@ -7,7 +7,7 @@
 #include "Grille.h"
 #include "Joueur.h"
 #include <random>
-
+#include <tuple>
 
 
 class IA {
